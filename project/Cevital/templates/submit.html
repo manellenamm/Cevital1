@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <title>Évaluation de la Formation</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+             
+            }
+            .box {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.2); 
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .box label {
+            display: block;
+            margin: 10px 0 5px;
+           
+        }
+        .box .main-label {
+            font-weight: bold; /* Texte en gras pour le label principal */
+        }
+        .box .option-label {
+            font-weight: normal; /* Texte normal pour les options de réponse */
+            display: inline; /* Affichage en ligne pour les options de réponse */
+            margin-right: 15px; /* Espacement entre les options */
+        }
+        .box input[type="radio"] {
+            margin-right: 5px; /* Espacement entre les radios et les labels */
+        }
+            .form-container {
+                max-width: 600px;
+                margin: 0 auto;
+                padding: 20px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                background-color: #014F8F; 
+            }
+            .form-container h1 {
+                text-align: center;
+            }
+            .form-container label {
+                display: block;
+                margin-top: 10px;
+            }
+            .form-container input[type="radio"] {
+                margin-top: 5px;
+            }
+            .form-container input[type="submit"] {
+                width: 100%;
+                padding: 10px;
+                background-color: rgba(255, 255, 255, 0.2); 
+                color: white;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                margin-top: 10px;
+            }
+            .form-container input[type="submit"]:hover {
+                background-color:#014F8F; 
+            }
+        </style>
+    </head>
+</head>
+<body>
+   
+    
+        <div class="form-container">
+            <h1>Évaluation de la Formation</h1>
+            <form id="evaluationForm" method="post" action=" http://127.0.0.1:8000/submitform/">
+
+                <input type="hidden" name="orienter_id" value="{{ orienter_id }}">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br><br>
+                <div class="box">
+                    <label>1. Les objectifs de la formation étaient clairs et précis:</label>
+                    
+                    <label for="objectifs7">
+                        <input type="radio" id="objectifs7" name="objectifs1" value="tres_satisfait">
+                        Très satisfait
+                    </label>
+                    
+                    <label for="objectifs2">
+                        <input type="radio" id="objectifs2" name="objectifs1" value="satisfait">
+                        Satisfait
+                    </label>
+                    
+                    <label for="objectifs3">
+                        <input type="radio" id="objectifs3" name="objectifs1" value="peu_satisfait">
+                        Peu satisfait
+                    </label>
+                    
+                    <label for="objectifs4">
+                        <input type="radio" id="objectifs4" name="objectifs1" value="insatisfait">
+                        Insatisfait
+                    </label>
+                </div>
+                <div class="box">
+                    <label>2. Le contenu répondait bien à mes besoins:</label>
+                    
+                    <label for="contenu11">
+                        <input type="radio" id="contenu11" name="contenu1" value="tres_satisfait">
+                        Très satisfait
+                    </label>
+                    
+                    <label for="contenu2">
+                        <input type="radio" id="contenu2" name="contenu1" value="satisfait">
+                        Satisfait
+                    </label>
+                    
+                    <label for="contenu3">
+                        <input type="radio" id="contenu3" name="contenu1" value="peu_satisfait">
+                        Peu satisfait
+                    </label>
+                    
+                    <label for="contenu4">
+                        <input type="radio" id="contenu4" name="contenu1" value="insatisfait">
+                        Insatisfait
+                    </label>
+                </div>
+    
+                <div class="box">
+                    <label>3. Il y avait un bon équilibre entre la théorie et la pratique:</label>
+                    
+                    <label for="equilibre1">
+                        <input type="radio" id="equilibre1" name="equilibre3" value="tres_satisfait">
+                        Très satisfait
+                    </label>
+                    
+                    <label for="equilibre2">
+                        <input type="radio" id="equilibre2" name="equilibre3" value="satisfait">
+                        Satisfait
+                    </label>
+                    
+                    <label for="equilibre3">
+                        <input type="radio" id="equilibre3" name="equilibre3" value="peu_satisfait">
+                        Peu satisfait
+                    </label>
+                    
+                    <label for="equilibre4">
+                        <input type="radio" id="equilibre4" name="equilibre3" value="insatisfait">
+                        Insatisfait
+                    </label>
+                </div>
+    
+                <div class="box">
+                    <label>4. La documentation est de qualité et me sera utile:</label>
+                    
+                    <label for="documentation1">
+                        <input type="radio" id="documentation1" name="documentation4" value="tres_satisfait">
+                        Très satisfait
+                    </label>
+                    
+                    <label for="documentation2">
+                        <input type="radio" id="documentation2" name="documentation4" value="satisfait">
+                        Satisfait
+                    </label>
+                    
+                    <label for="documentation3">
+                        <input type="radio" id="documentation3" name="documentation4" value="peu_satisfait">
+                        Peu satisfait
+                    </label>
+                    
+                    <label for="documentation4">
+                        <input type="radio" id="documentation4" name="documentation4" value="insatisfait">
+                        Insatisfait
+                    </label>
+                </div>
+    
+                <div class="box">
+                    <label>5. Les méthodes et les techniques utilisées ont facilité mon apprentissage:</label>
+                    
+                    <label for="methodes1">
+                        <input type="radio" id="methodes1" name="methodes5" value="tres_satisfait">
+                        Très satisfait
+                    </label>
+                    
+                    <label for="methodes2">
+                        <input type="radio" id="methodes2" name="methodes5" value="satisfait">
+                        Satisfait
+                    </label>
+                    
+                    <label for="methodes3">
+                        <input type="radio" id="methodes3" name="methodes5" value="peu_satisfait">
+                        Peu satisfait
+                    </label>
+                    
+                    <label for="methodes4">
+                        <input type="radio" id="methodes4" name="methodes5" value="insatisfait">
+                        Insatisfait
+                    </label>
+                </div>
+    
+               
+                <div class="box">
+                    <label>6. Le formateur communiquait de façon claire:</label>
+                    
+                    <label for="communication1">
+                        <input type="radio" id="communication1" name="communication6" value="tres_satisfait">
+                        Très satisfait
+                    </label>
+                    
+                    <label for="communication2">
+                        <input type="radio" id="communication2" name="communication6" value="satisfait">
+                        Satisfait
+                    </label>
+                    
+                    <label for="communication3">
+                        <input type="radio" id="communication3" name="communication6" value="peu_satisfait">
+                        Peu satisfait
+                    </label>
+                    
+                    <label for="communication4">
+                        <input type="radio" id="communication4" name="communication6" value="insatisfait">
+                        Insatisfait
+                    </label>
+                </div>
+            
+                <div class="box">
+                    <label>7. Le formateur a été attentif et a su s’adapter au groupe:</label>
+                    
+                    <label for="adaptation1">
+                        <input type="radio" id="adaptation1" name="adaptation7" value="tres_satisfait">
+                        Très satisfait
+                    </label>
+                    
+                    <label for="adaptation2">
+                        <input type="radio" id="adaptation2" name="adaptation7" value="satisfait">
+                        Satisfait
+                    </label>
+                    
+                    <label for="adaptation3">
+                        <input type="radio" id="adaptation3" name="adaptation7" value="peu_satisfait">
+                        Peu satisfait
+                    </label>
+                    
+                    <label for="adaptation4">
+                        <input type="radio" id="adaptation4" name="adaptation7" value="insatisfait">
+                        Insatisfait
+                    </label>
+                </div>
+    
+                <div class="box">
+                    <label>8. Le formateur a favorisé les échanges et la participation du groupe:</label>
+                    
+                    <label for="participation1">
+                        <input type="radio" id="participation1" name="participation8" value="tres_satisfait">
+                        Très satisfait
+                    </label>
+                    
+                    <label for="participation2">
+                        <input type="radio" id="participation2" name="participation8" value="satisfait">
+                        Satisfait
+                    </label>
+                    
+                    <label for="participation3">
+                        <input type="radio" id="participation3" name="participation8" value="peu_satisfait">
+                        Peu satisfait
+                    </label>
+                    
+                    <label for="participation4">
+                        <input type="radio" id="participation4" name="participation8" value="insatisfait">
+                        Insatisfait
+                    </label>
+                </div>
+            
+                <div class="box">
+                    <label>9. Le formateur a suscité mon intérêt à la session de la formation:</label>
+                    
+                    <label for="interet1">
+                        <input type="radio" id="interet1" name="interet9" value="tres_satisfait">
+                        Très satisfait
+                    </label>
+                    
+                    <label for="interet2">
+                        <input type="radio" id="interet2" name="interet9" value="satisfait">
+                        Satisfait
+                    </label>
+                    
+                    <label for="interet3">
+                        <input type="radio" id="interet3" name="interet9" value="peu_satisfait">
+                        Peu satisfait
+                    </label>
+                    
+                    <label for="interet4">
+                        <input type="radio" id="interet4" name="interet9" value="insatisfait">
+                        Insatisfait
+                    </label>
+                </div>
+            
+                <div class="box">
+                    <label>10. La durée de la formation était suffisante:</label>
+                    
+                    <label for="duree1">
+                        <input type="radio" id="duree1" name="duree10" value="tres_satisfait">
+                        Très satisfait
+                    </label>
+                    
+                    <label for="duree2">
+                        <input type="radio" id="duree2" name="duree10" value="satisfait">
+                        Satisfait
+                    </label>
+                    
+                    <label for="duree3">
+                        <input type="radio" id="duree3" name="duree10" value="peu_satisfait">
+                        Peu satisfait
+                    </label>
+                    
+                    <label for="duree4">
+                        <input type="radio" id="duree4" name="duree10" value="insatisfait">
+                        Insatisfait
+                    </label>
+                </div>
+            
+                <div class="box">
+                    <label>11. Le local pédagogique était approprié:</label>
+                    
+                    <label for="local1">
+                        <input type="radio" id="local1" name="local11" value="tres_satisfait">
+                        Très satisfait
+                    </label>
+                    
+                    <label for="local2">
+                        <input type="radio" id="local2" name="local11" value="satisfait">
+                        Satisfait
+                    </label>
+                    
+                    <label for="local3">
+                        <input type="radio" id="local3" name="local11" value="peu_satisfait">
+                        Peu satisfait
+                    </label>
+                    
+                    <label for="local4">
+                        <input type="radio" id="local4" name="local11" value="insatisfait">
+                        Insatisfait
+                    </label>
+                </div>
+            
+                <div class="box">
+                    <label>12. Les moyens pédagogiques utilisés étaient de qualité:</label>
+                    
+                    <label for="moyens1">
+                        <input type="radio" id="moyens1" name="moyens12" value="tres_satisfait">
+                        Très satisfait
+                    </label>
+                    
+                    <label for="moyens2">
+                        <input type="radio" id="moyens2" name="moyens12" value="satisfait">
+                        Satisfait
+                    </label>
+                    
+                    <label for="moyens3">
+                        <input type="radio" id="moyens3" name="moyens12" value="peu_satisfait">
+                        Peu satisfait
+                    </label>
+                    
+                    <label for="moyens4">
+                        <input type="radio" id="moyens4" name="moyens12" value="insatisfait">
+                        Insatisfait
+                    </label>
+                </div>
+            
+                <div class="box">
+                    <label>13. J’ai compris et intégré la majorité du contenu de la session:</label>
+                    
+                    <label for="comprehension1">
+                        <input type="radio" id="comprehension1" name="comprehension13" value="tres_satisfait">
+                        Très satisfait
+                    </label>
+                    
+                    <label for="comprehension2">
+                        <input type="radio" id="comprehension2" name="comprehension13" value="satisfait">
+                        Satisfait
+                    </label>
+                    
+                    <label for="comprehension3">
+                        <input type="radio" id="comprehension3" name="comprehension13" value="peu_satisfait">
+                        Peu satisfait
+                    </label>
+                    
+                    <label for="comprehension4">
+                        <input type="radio" id="comprehension4" name="comprehension13" value="insatisfait">
+                        Insatisfait
+                    </label>
+                </div>
+            
+                <div class="box">
+                    <label>14. Les connaissances acquises peuvent être directement appliquées dans mon travail:</label>
+                    
+                    <label for="applicables1">
+                        <input type="radio" id="applicables1" name="applicables14" value="tres_satisfait">
+                        Très satisfait
+                    </label>
+                    
+                    <label for="applicables2">
+                        <input type="radio" id="applicables2" name="applicables14" value="satisfait">
+                        Satisfait
+                    </label>
+                    
+                    <label for="applicables3">
+                        <input type="radio" id="applicables3" name="applicables14" value="peu_satisfait">
+                        Peu satisfait
+                    </label>
+                    
+                    <label for="applicables4">
+                        <input type="radio" id="applicables4" name="applicables14" value="insatisfait">
+                        Insatisfait
+                    </label>
+                </div>
+            
+                <div class="box">
+                    <label>15. De façon générale, je suis satisfait(e) de la formation reçue:</label>
+                    
+                    <label for="satisfaction1">
+                        <input type="radio" id="satisfaction1" name="satisfaction15" value="tres_satisfait">
+                        Très satisfait
+                    </label>
+                    
+                    <label for="satisfaction2">
+                        <input type="radio" id="satisfaction2" name="satisfaction15" value="satisfait">
+                        Satisfait
+                    </label>
+                    
+                    <label for="satisfaction3">
+                        <input type="radio" id="satisfaction3" name="satisfaction15" value="peu_satisfait">
+                        Peu satisfait
+                    </label>
+                    
+                    <label for="satisfaction4">
+                        <input type="radio" id="satisfaction4" name="satisfaction15" value="insatisfait">
+                        Insatisfait
+                    </label>
+                </div>
+            
+                <div class="box">
+                    <label>16. Je recommanderais à d’autres de suivre cette formation:</label>
+                    
+                    <label for="recommendation15">
+                        <input type="radio" id="recommendation15" name="recommendation16" value="tres_satisfait">
+                        Très satisfait
+                    </label>
+                    
+                    <label for="recommendation2">
+                        <input type="radio" id="recommendation2" name="recommendation16" value="satisfait">
+                        Satisfait
+                    </label>
+                    
+                    <label for="recommendation3">
+                        <input type="radio" id="recommendation3" name="recommendation16" value="peu_satisfait">
+                        Peu satisfait
+                    </label>
+                    
+                    <label for="recommendation4">
+                        <input type="radio" id="recommendation4" name="recommendation16" value="insatisfait">
+                        Insatisfait
+                    </label>
+                </div>
+           
+            
+                       
+    
+                <input type="submit" value="Envoyer">
+            </form>
+        </div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Participants pour la Formation</title>
+</head>
+<body>
+    <h1>Participants pour la Formation: {{ formation.intitule }}</h1>
+
+    <ul>
+        {% for orientation in orientations %}
+            <h2>Date de début: {{ orientation.date_debut.date }} - Date de fin: {{ orientation.date_fin.date }}</h2>
+            <ul>
+                {% for participant in participants %}
+                    {% if participant.orientation == orientation %}
+                        <li>
+                            {{ participant.participant.nom }} {{ participant.participant.prenom }} - Présence: {{ participant.presence }} - État: {{ participant.etat }}
+                        </li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        {% endfor %}
+    </ul>
+</body>
+</html>
